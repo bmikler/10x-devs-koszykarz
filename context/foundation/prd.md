@@ -167,23 +167,35 @@ nicer form": the phone-in-shop scenario has to feel fast.
 
 ### Expense logging
 
-- FR-007: User can log an expense by entering an amount and selecting one of
-          their categories. The date field defaults to today; the user can
-          change it if logging a past expense. Priority: must-have
+- FR-007: User can log an expense by entering an amount, selecting one of
+          their categories (or defaulting to "other"), and optionally
+          overriding the date (defaults to today) and a short text name
+          (defaults to the selected category's name). Priority: must-have
   > Socrates: Counter-argument considered: "This is just 'amount + category +
   > save' which Excel-on-phone almost matches." Resolution: kept as written.
   > Phase 1 elevated mobile-fast capture as the product's reason to exist;
   > this FR is the one that delivers it. The 10-second target lives in Success
-  > Criteria as the secondary signal.
+  > Criteria as the secondary signal. Counter-argument considered: "A required
+  > name field slows the 10-second criterion." Resolution: UI prefills the
+  > field from the selected category, so the default-path keystrokes don't
+  > change; the override is opt-in for cases like 'McDonalds' under food, and
+  > populates the v1.1 grouped-by-name report on day one.
 
 - FR-008: User can log an expense without picking a category — the expense is
-          recorded under the implicit "other" category. Priority: must-have
+          recorded under the implicit "other" category, which is automatically
+          present once the user has created at least one category in the
+          current year. Priority: must-have
   > Socrates: Counter-argument considered: "Without a grouped-by-name report,
   > 'other' is just a trash can — ship both or neither." Resolution: kept.
   > Logging into "other" in MVP populates the dataset that the v1.1 grouped
   > report will consume. Without FR-008 in MVP, v1.1's report would have no
   > prior data to work with on the day it ships. The half-feature in v1 is the
-  > price for a complete feature in v1.1.
+  > price for a complete feature in v1.1. Counter-argument considered: "Why
+  > not seed 'other' preemptively so the very first action of every year
+  > works?" Resolution: the trigger model auto-seeds 'other' alongside the
+  > user's first intentional category creation for the year, which is the only
+  > path that makes sense — creating categories is the act of declaring the
+  > plan, and the catch-all only matters once a plan exists.
 
 - FR-009: User can view a list of their previously logged expenses.
           Priority: must-have

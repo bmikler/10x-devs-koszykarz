@@ -619,24 +619,24 @@ F-01 ships schema only; no query paths exist yet. Two notes for downstream:
 
 #### Automated
 
-- [x] 2.1 `npm run db:types` exits 0; file contains `Database` export with both tables
-- [x] 2.2 `npm run build` exits 0 (Astro runs `astro check`)
-- [x] 2.3 `npm run lint` passes
+- [x] 2.1 `npm run db:types` exits 0; file contains `Database` export with both tables — ceca7b5
+- [x] 2.2 `npm run build` exits 0 (Astro runs `astro check`) — ceca7b5
+- [x] 2.3 `npm run lint` passes — ceca7b5
 
 #### Manual
 
-- [x] 2.4 IntelliSense on `supabase.from('categories').select('*')` shows the typed row shape
-- [x] 2.5 `src/db/database.types.ts` is tracked in git
+- [x] 2.4 IntelliSense on `supabase.from('categories').select('*')` shows the typed row shape — ceca7b5
+- [x] 2.5 `src/db/database.types.ts` is tracked in git — ceca7b5
 
 ### Phase 3: Doc updates — PRD FR-007 / FR-008, roadmap, lessons
 
 #### Automated
 
-- [ ] 3.1 `npm run lint && npm run build` still pass
-- [ ] 3.2 `rg -l "FR-007|FR-008|F-01" context/foundation/` resolves cleanly
+- [x] 3.1 `npm run lint && npm run build` still pass
+- [x] 3.2 `rg -l "FR-007|FR-008|F-01" context/foundation/` resolves cleanly
 
 #### Manual
 
-- [ ] 3.3 PRD FR-007/FR-008 text aligns with the schema in Phase 1
-- [ ] 3.4 Roadmap `Done` entry names the migration file correctly
-- [ ] 3.5 `lessons.md` reads as a usable future reference (not a journal entry)
+- [x] 3.3 PRD FR-007/FR-008 text aligns with the schema in Phase 1
+- [x] 3.4 Roadmap `Done` entry names the migration file correctly
+- [x] 3.5 `lessons.md` reads as a usable future reference (not a journal entry)

@@ -29,7 +29,7 @@ Replace the personal-budget Excel workflow with a mobile-first web app where log
 
 | ID    | Change ID                | Outcome (user can …)                                                                | Prerequisites    | PRD refs                            | Status   |
 | ----- | ------------------------ | ----------------------------------------------------------------------------------- | ---------------- | ----------------------------------- | -------- |
-| F-01  | data-layer-and-rls       | (foundation) categories + expenses tables + per-user RLS + generated TS types       | —                | NFR §Data isolation, FR-003, FR-007 | ready    |
+| F-01  | data-layer-and-rls       | (foundation) categories + expenses tables + per-user RLS + generated TS types       | —                | NFR §Data isolation, FR-003, FR-007 | done     |
 | S-01  | signed-in-shell          | sign in, sign out, and land on a hub linking to Categories / Log expense / Report   | —                | FR-001, FR-002                      | ready    |
 | S-02  | categories-create-list   | create a category and see all categories listed (including implicit "other")        | F-01, S-01       | FR-003, FR-004                      | proposed |
 | S-03  | log-expense-from-phone   | log an expense (amount + category + date) from a phone, with "other" as fallback    | F-01, S-01, S-02 | FR-007, FR-008                      | proposed |
@@ -176,7 +176,7 @@ What's already in place in the codebase as of 2026-05-27 (auto-researched + user
 
 | Roadmap ID | Change ID                | Suggested issue title                                      | Ready for `/10x-plan` | Notes |
 | ---------- | ------------------------ | ---------------------------------------------------------- | --------------------- | ----- |
-| F-01       | data-layer-and-rls       | Foundation: domain data model + per-user RLS               | yes                   | Run `/10x-plan data-layer-and-rls`. |
+| F-01       | data-layer-and-rls       | Foundation: domain data model + per-user RLS               | shipped               | Migration 20260528132105_create_budget_schema.sql; types in src/db/database.types.ts. |
 | S-01       | signed-in-shell          | Signed-in shell + budget-tracker landing hub               | yes                   | Run `/10x-plan signed-in-shell`. Parallel with F-01. |
 | S-02       | categories-create-list   | Categories: create + list (incl. implicit "other")         | no                    | Blocked by F-01, S-01 — promote to `ready` once both ship. |
 | S-03       | log-expense-from-phone   | Log an expense from a phone (with "other" fallback)        | no                    | Blocked by F-01, S-01, S-02. |
@@ -211,4 +211,4 @@ What's already in place in the codebase as of 2026-05-27 (auto-researched + user
 
 ## Done
 
-(Empty on first generation. `/10x-archive` will append entries here when changes archive.)
+- F-01 / data-layer-and-rls — shipped 2026-05-28. Migration 20260528132105_create_budget_schema.sql; types in src/db/database.types.ts.
