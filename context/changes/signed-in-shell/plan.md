@@ -189,8 +189,8 @@ No code changes. This phase is purely verification.
 
 #### Automated
 
-- [x] 1.1 Linting passes: `npm run lint`
-- [x] 1.2 Build succeeds: `npm run build`
+- [x] 1.1 Linting passes: `npm run lint` — 5ac2685
+- [x] 1.2 Build succeeds: `npm run build` — 5ac2685
 
 #### Manual
 
@@ -203,8 +203,8 @@ No code changes. This phase is purely verification.
 
 #### Automated
 
-- [ ] 2.1 Linting passes: `npm run lint`
-- [ ] 2.2 Build succeeds: `npm run build`
+- [x] 2.1 Linting passes: `npm run lint`
+- [x] 2.2 Build succeeds: `npm run build`
 
 #### Manual
 
